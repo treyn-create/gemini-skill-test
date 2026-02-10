@@ -60,6 +60,17 @@ const response = await ai.models.generateContent({
 console.log(response.text);
 ```
 
+## API spec (source of truth)
+
+**Always use the latest REST API discovery spec as the source of truth for API definitions** (request/response schemas, parameters, methods). Fetch the spec when implementing or debugging API integration:
+
+- **v1beta** (default): `https://generativelanguage.googleapis.com/$discovery/rest?version=v1beta`  
+  Use this unless the integration is explicitly pinned to v1. The official SDKs (google-genai, @google/genai) target v1beta.
+- **v1**: `https://generativelanguage.googleapis.com/$discovery/rest?version=v1`  
+  Use only when the integration is specifically set to v1.
+
+When in doubt, use v1beta. Refer to the spec for exact field names, types, and supported operations.
+
 ## How to use the Gemini API
 
 For detailed API documentation, fetch from the official docs index:
