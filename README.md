@@ -5,7 +5,11 @@ Agent skill for building applications with the Gemini API. Teaches AI agents cur
 ## Install
 
 ```bash
+# Install all skills from the repo
 npx skills add treyn-create/gemini-skill-test
+
+# Or install only this skill
+npx skills add treyn-create/gemini-skill-test --skill gemini-api-development
 ```
 
 ## Contents
